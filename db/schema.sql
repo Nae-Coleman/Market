@@ -63,3 +63,8 @@ CREATE TABLE orders_products (
   -- Composite primary key prevents duplicate products in the same order
   PRIMARY KEY (order_id, product_id)
 );
+
+
+--Users place orders. Orders belong to one user.
+--Products are sold in many orders, and orders can contain many products,
+--so I used a join table called orders_products to track quantities
