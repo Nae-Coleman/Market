@@ -11,3 +11,8 @@ export function createToken(payload) {
 export function verifyToken(token) {
   return jwt.verify(token, SECRET);
 }
+/**
+ * JWT utilities
+ * Tokens are used to authenticate users after login or registration.
+ * Tokens contain the user id and are verified on each request.
+ */

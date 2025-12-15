@@ -45,3 +45,15 @@ router.get("/:id/orders", requireUser, async (req, res) => {
 });
 
 export default router;
+/**
+ * Products Router
+ *
+ * Public routes for browsing products.
+ * No authentication is required to view products.
+ */
+//G ET /products/:id Retrieves a single product by id
+// Returns 404 if the product does not exist
+//GET /products/:id/orders
+//// Protected route
+// Returns all orders made by the logged-in user that include this product
+// Product existence is checked before authentication to return correct status codes

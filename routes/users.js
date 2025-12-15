@@ -52,3 +52,18 @@ router.post(
 );
 
 export default router;
+
+/**
+ * Users Router
+ *
+ * Handles user registration and login.
+ * Passwords are hashed before being stored.
+ * Successful authentication returns a JWT token.
+ */
+// Register a new user
+// - Validates required fields
+// - Hashes password before saving
+// - Returns a token for immediate authentication
+// Login existing user
+// - Compares hashed passwords
+// - Returns a token if credentials are valid
