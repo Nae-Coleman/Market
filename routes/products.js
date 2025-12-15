@@ -36,7 +36,7 @@ router.get("/:ids", async (req, res) => {
  *   that include this product
  */
 router.get("/:id/orders", requireUser, async (req, res) => {
-  const product = await getProductById(req.params.id);
+  const product = await getProductById(Number(req.params.id));
   if (!product) return res.status(404).send("Product not found");
 
   const orders = await getOrdersForProductByUser(product.id, req.user.id);
